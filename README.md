@@ -71,54 +71,60 @@ npx expo start
 
 ### 📸 Imagens
 
+## 📸 Demonstração Visual
+
 <table>
   <tr>
     <td align="center">
       <b>Login</b><br>
-      <img src="assets/screenshots/login.jpeg" width="200"/>
+      <img src="assets/screenshots/login.jpeg" width="180"/>
     </td>
     <td align="center">
       <b>Cadastro</b><br>
-      <img src="assets/screenshots/cadastro.jpeg" width="200"/>
+      <img src="assets/screenshots/cadastro.jpeg" width="180"/>
     </td>
     <td align="center">
-      <b>Home</b><br>
-      <img src="assets/screenshots/home1.jpeg" width="200"/>
+      <b>Home Dark</b><br>
+      <img src="assets/screenshots/home1.jpeg" width="180"/>
+    </td>
+    <td align="center">
+      <b>Home Light</b><br>
+      <img src="assets/screenshots/home2.jpeg" width="180"/>
+    </td>
+  </tr>
+
+  <tr>
+    <td align="center">
+      <b>Agendamentos Dark</b><br>
+      <img src="assets/screenshots/agendamentos1.jpeg" width="180"/>
+    </td>
+    <td align="center">
+      <b>Agendamentos Light</b><br>
+      <img src="assets/screenshots/agendamentos2.jpeg" width="180"/>
+    </td>
+    <td align="center">
+      <b>Meus Agendamentos Dark</b><br>
+      <img src="assets/screenshots/meus1.jpeg" width="180"/>
+    </td>
+    <td align="center">
+      <b>Meus Agendamentos Light</b><br>
+      <img src="assets/screenshots/meus2.jpeg" width="180"/>
+    </td>
+  </tr>
+
+  <tr>
+    <td align="center">
+      <b>Perfil Dark</b><br>
+      <img src="assets/screenshots/perfil1.jpeg" width="180"/>
+    </td>
+    <td align="center">
+      <b>Perfil Light</b><br>
+      <img src="assets/screenshots/perfil2.jpeg" width="180"/>
     </td>
   </tr>
 </table>
 
 ---
-
-### Home (Modo Escuro)
-![Home Dark](assets/screenshots/home1.jpeg)
-
-### Home (Modo Claro)
-![Home Light](assets/screenshots/home2.jpeg)
-
----
-
-### Novo Agendamento (Modo Escuro)
-![Agendamento Dark](assets/screenshots/agendamentos1.jpeg)
-
-### Novo Agendamento (Modo Claro)
-![Agendamento Light](assets/screenshots/agendamentos2.jpeg)
-
----
-
-### Meus Agendamentos (Modo Escuro)
-![Meus Dark](assets/screenshots/meus1.jpeg)
-
-### Meus Agendamentos (Modo Claro)
-![Meus Light](assets/screenshots/meus2.jpeg)
-
----
-
-### Perfil (Modo Escuro)
-![Perfil Dark](assets/screenshots/perfil1.jpeg)
-
-### Perfil (Modo Claro)
-![Perfil Light](assets/screenshots/perfil2.jpeg)
 
 ### 🎥 Vídeo
 
