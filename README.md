@@ -71,11 +71,22 @@ npx expo start
 
 ### 📸 Imagens
 
-### Login
-![Login](assets/screenshots/login.jpeg)
-
-### Cadastro
-![Cadastro](assets/screenshots/cadastro.jpeg)
+<table>
+  <tr>
+    <td align="center">
+      <b>Login</b><br>
+      <img src="assets/screenshots/login.jpeg" width="200"/>
+    </td>
+    <td align="center">
+      <b>Cadastro</b><br>
+      <img src="assets/screenshots/cadastro.jpeg" width="200"/>
+    </td>
+    <td align="center">
+      <b>Home</b><br>
+      <img src="assets/screenshots/home1.jpeg" width="200"/>
+    </td>
+  </tr>
+</table>
 
 ---
 
