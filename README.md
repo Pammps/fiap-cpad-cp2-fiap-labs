@@ -103,7 +103,7 @@ npx expo start
 
 Assista ao vídeo demonstrativo:
 
-👉 https://youtube.com/SEU-LINK-AQUI
+👉 https://youtube.com/shorts/PprxTJ4Kq6Q?feature=share
 
 ---
 
