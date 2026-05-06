@@ -74,31 +74,6 @@ npx expo start
 
 ## 📸 Demonstração
 
-### Prints das telas
-
-* Login
-![Login](assets/screenshots/login.png)
-
-* Cadastro
-![Cadastro](assets/screenshots/cadastro.png)
-
-* Home
-![Home Dark](assets/screenshots/home_dark.png)
-![Home Light](assets/screenshots/home_light.png)
-
-* Criar agendamento
-![Agendamentos Dark](assets/screenshots/agendamentos_dark.png)
-![Agendamentos Light](assets/screenshots/agendamentos_light.png)
-
-* Meus agendamentos
-![Meus agendamentos dark](assets/screenshots/meus_dark.png)
-![Meus agendamentos light](assets/screenshots/meus_light.png)
-
-* Perfil
-![Perfil dark](assets/screenshots/perfil_dark.png)
-![Perfil light](assets/screenshots/perfil_light.png)
-
-
 ### 🎥 Vídeo
 
 Assista ao vídeo demonstrativo:
