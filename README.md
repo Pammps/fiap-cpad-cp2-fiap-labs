@@ -1,50 +1,156 @@
-# Welcome to your Expo app 👋
+# 📱 FIAP Labs
 
-This is an [Expo](https://expo.dev) project created with [`create-expo-app`](https://www.npmjs.com/package/create-expo-app).
+## 📌 Sobre o Projeto
 
-## Get started
+O **FIAP Labs** é um aplicativo mobile desenvolvido para melhorar o processo de agendamento de laboratórios dentro da FIAP.
 
-1. Install dependencies
+Atualmente, o processo pode ser manual. O app permite que alunos realizem agendamentos de forma rápida, simples e digital.
 
-   ```bash
-   npm install
-   ```
+### 🎯 Problema escolhido
 
-2. Start the app
+A dificuldade de organização e agendamento dos laboratórios.
 
-   ```bash
-   npx expo start
-   ```
+### 🚀 Solução
 
-In the output, you'll find options to open the app in a
+Um aplicativo mobile que permite:
 
-- [development build](https://docs.expo.dev/develop/development-builds/introduction/)
-- [Android emulator](https://docs.expo.dev/workflow/android-studio-emulator/)
-- [iOS simulator](https://docs.expo.dev/workflow/ios-simulator/)
-- [Expo Go](https://expo.dev/go), a limited sandbox for trying out app development with Expo
+* Criar agendamentos
+* Visualizar agendamentos
+* Gerenciar reservas facilmente
 
-You can start developing by editing the files inside the **app** directory. This project uses [file-based routing](https://docs.expo.dev/router/introduction).
+---
 
-## Get a fresh project
+## 🔄 Evolução do CP1 → CP2
 
-When you're ready, run:
+No CP2, o projeto foi aprimorado com:
+
+* Autenticação de usuários
+* Persistência de dados com AsyncStorage
+* Estado global com Context API
+* Validação de formulários
+* Melhorias de UI/UX
+* Tema claro/escuro (diferencial)
+
+---
+
+## ⚙️ Funcionalidades
+
+* Cadastro de usuário
+* Login com validação
+* Persistência de sessão
+* Criação de agendamentos
+* Listagem de agendamentos
+* Exclusão de agendamentos
+* Busca de laboratórios
+* Tema claro/escuro
+* Logout
+
+---
+
+## 👥 Integrantes
+
+* Pamella Souza da Silva Ferreira — RM: 566172 2CCPH
+
+---
+
+## ▶️ Como Rodar o Projeto
+
+### Pré-requisitos
+
+* Node.js
+* Expo CLI
+* Expo Go
+
+### Passo a passo
 
 ```bash
-npm run reset-project
+git clone https://github.com/SEU-USUARIO/fiap-cpad-cp2-fiap-labs
+cd fiap-cpad-cp2-fiap-labs
+npm install
+npx expo start
 ```
 
-This command will move the starter code to the **app-example** directory and create a blank **app** directory where you can start developing.
+---
 
-## Learn more
+## 📸 Demonstração
 
-To learn more about developing your project with Expo, look at the following resources:
+### Prints das telas
 
-- [Expo documentation](https://docs.expo.dev/): Learn fundamentals, or go into advanced topics with our [guides](https://docs.expo.dev/guides).
-- [Learn Expo tutorial](https://docs.expo.dev/tutorial/introduction/): Follow a step-by-step tutorial where you'll create a project that runs on Android, iOS, and the web.
+* Login
+![Login](assets/screenshots/login.png)
 
-## Join the community
+* Cadastro
+![Cadastro](assets/screenshots/cadastro.png)
 
-Join our community of developers creating universal apps.
+* Home
+![Home Dark](assets/screenshots/home_dark.png)
+![Home Light](assets/screenshots/home_light.png)
 
-- [Expo on GitHub](https://github.com/expo/expo): View our open source platform and contribute.
-- [Discord community](https://chat.expo.dev): Chat with Expo users and ask questions.
+* Criar agendamento
+![Agendamentos Dark](assets/screenshots/agendamentos_dark.png)
+![Agendamentos Light](assets/screenshots/agendamentos_light.png)
+
+* Meus agendamentos
+![Meus agendamentos dark](assets/screenshots/meus_dark.png)
+![Meus agendamentos light](assets/screenshots/meus_light.png)
+
+* Perfil
+![Perfil dark](assets/screenshots/perfil_dark.png)
+![Perfil light](assets/screenshots/perfil_light.png)
+
+
+### 🎥 Vídeo
+
+Assista ao vídeo demonstrativo:
+
+👉 https://youtube.com/SEU-LINK-AQUI
+
+---
+
+## 🧠 Decisões Técnicas
+
+### Estrutura
+
+* app/ → rotas
+* context/ → estados globais
+* components/ → componentes reutilizáveis
+
+### Contexts
+
+* AuthContext → login, logout, usuário
+* AppDataContext → agendamentos
+* ThemeContext → tema claro/escuro
+
+### Autenticação
+
+Implementada com AsyncStorage, validando dados salvos localmente.
+
+### Persistência
+
+* "user" → dados do usuário
+* "session" → sessão ativa
+* "agendamentos" → lista de reservas
+
+### Navegação protegida
+
+Usuário não autenticado é redirecionado para login.
+
+---
+
+## ⭐ Diferencial Implementado
+
+### Tema Claro/Escuro
+
+Permite alternar entre modos de visualização.
+
+**Justificativa:**
+Melhora a experiência do usuário, permitindo personalização e conforto visual.
+
+---
+
+## 🔮 Próximos Passos
+
+* Integração com API real
+* Notificações de agendamento
+* Upload de foto de perfil
+* Edição de agendamentos
