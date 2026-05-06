@@ -80,34 +80,34 @@ npx expo start
 ---
 
 ### Home (Modo Escuro)
-![Home Dark](assets/screenshots/home_dark.jpeg)
+![Home Dark](assets/screenshots/home1.jpeg)
 
 ### Home (Modo Claro)
-![Home Light](assets/screenshots/home_light.jpeg)
+![Home Light](assets/screenshots/home2.jpeg)
 
 ---
 
 ### Novo Agendamento (Modo Escuro)
-![Agendamento Dark](assets/screenshots/agendamentos_dark.jpeg)
+![Agendamento Dark](assets/screenshots/agendamentos1.jpeg)
 
 ### Novo Agendamento (Modo Claro)
-![Agendamento Light](assets/screenshots/agendamentos_light.jpeg)
+![Agendamento Light](assets/screenshots/agendamentos2.jpeg)
 
 ---
 
 ### Meus Agendamentos (Modo Escuro)
-![Meus Dark](assets/screenshots/meus_dark.jpeg)
+![Meus Dark](assets/screenshots/meus1.jpeg)
 
 ### Meus Agendamentos (Modo Claro)
-![Meus Light](assets/screenshots/meus_light.jpeg)
+![Meus Light](assets/screenshots/meus2.jpeg)
 
 ---
 
 ### Perfil (Modo Escuro)
-![Perfil Dark](assets/screenshots/perfil_dark.jpeg)
+![Perfil Dark](assets/screenshots/perfil1.jpeg)
 
 ### Perfil (Modo Claro)
-![Perfil Light](assets/screenshots/perfil_light.jpeg)
+![Perfil Light](assets/screenshots/perfil2.jpeg)
 
 ### 🎥 Vídeo
 
