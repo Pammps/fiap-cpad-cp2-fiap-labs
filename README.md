@@ -1,22 +1,17 @@
 # 📱 FIAP Labs
 
-## 📌 Sobre o Projeto
+## 📱 Sobre o Projeto
 
-O **FIAP Labs** é um aplicativo mobile desenvolvido para melhorar o processo de agendamento de laboratórios dentro da FIAP.
+O FIAP Labs é um aplicativo mobile desenvolvido para facilitar o agendamento de laboratórios dentro da FIAP.
 
-Atualmente, o processo pode ser manual. O app permite que alunos realizem agendamentos de forma rápida, simples e digital.
+O problema identificado foi a ausência de um sistema digital simples e acessível para reserva de laboratórios, o que pode gerar desorganização e dificuldade de uso.
 
-### 🎯 Problema escolhido
-
-A dificuldade de organização e agendamento dos laboratórios.
-
-### 🚀 Solução
-
-Um aplicativo mobile que permite:
-
-* Criar agendamentos
-* Visualizar agendamentos
-* Gerenciar reservas facilmente
+O aplicativo permite que o usuário:
+- Realize cadastro e login
+- Visualize seus agendamentos
+- Crie novos agendamentos
+- Exclua reservas existentes
+- Alterne entre tema claro e escuro
 
 ---
 
@@ -74,6 +69,46 @@ npx expo start
 
 ## 📸 Demonstração
 
+### 📸 Imagens
+
+### Login
+![Login](assets/screenshots/login.jpeg)
+
+### Cadastro
+![Cadastro](assets/screenshots/cadastro.jpeg)
+
+---
+
+### Home (Modo Escuro)
+![Home Dark](assets/screenshots/home_dark.jpeg)
+
+### Home (Modo Claro)
+![Home Light](assets/screenshots/home_light.jpeg)
+
+---
+
+### Novo Agendamento (Modo Escuro)
+![Agendamento Dark](assets/screenshots/agendamentos_dark.jpeg)
+
+### Novo Agendamento (Modo Claro)
+![Agendamento Light](assets/screenshots/agendamentos_light.jpeg)
+
+---
+
+### Meus Agendamentos (Modo Escuro)
+![Meus Dark](assets/screenshots/meus_dark.jpeg)
+
+### Meus Agendamentos (Modo Claro)
+![Meus Light](assets/screenshots/meus_light.jpeg)
+
+---
+
+### Perfil (Modo Escuro)
+![Perfil Dark](assets/screenshots/perfil_dark.jpeg)
+
+### Perfil (Modo Claro)
+![Perfil Light](assets/screenshots/perfil_light.jpeg)
+
 ### 🎥 Vídeo
 
 Assista ao vídeo demonstrativo:
@@ -84,27 +119,39 @@ Assista ao vídeo demonstrativo:
 
 ## 🧠 Decisões Técnicas
 
-### Estrutura
+O projeto foi estruturado utilizando o Expo Router, organizando as rotas em duas principais áreas: autenticação (`(auth)`) e aplicação principal (`(tabs)`), garantindo separação clara de responsabilidades e melhor manutenção do código.
 
-* app/ → rotas
-* context/ → estados globais
-* components/ → componentes reutilizáveis
+A aplicação utiliza dois Contexts principais:
 
-### Contexts
+- **AuthContext**: responsável por gerenciar autenticação do usuário, incluindo login, cadastro, logout e persistência de sessão com AsyncStorage.
+- **AppDataContext**: responsável pelo gerenciamento dos agendamentos (criação, listagem e exclusão), garantindo persistência dos dados localmente.
 
-* AuthContext → login, logout, usuário
-* AppDataContext → agendamentos
-* ThemeContext → tema claro/escuro
+A persistência foi implementada com AsyncStorage, armazenando:
+- Dados do usuário (`user`)
+- Sessão ativa (`loggedUser`)
+- Lista de agendamentos (`agendamentos`)
 
-### Autenticação
+A navegação protegida foi implementada no arquivo `app/index.jsx`, redirecionando usuários não autenticados para a tela de login, impedindo acesso indevido às telas internas.
 
-Implementada com AsyncStorage, validando dados salvos localmente.
+Foram utilizados os hooks:
+- `useState` para controle de estados locais
+- `useEffect` para carregamento inicial de dados persistidos
+- `useContext` para acesso ao estado global
 
-### Persistência
+A estilização foi feita com StyleSheet e uso de tema dinâmico, garantindo consistência visual e adaptação entre modo claro e escuro.
 
-* "user" → dados do usuário
-* "session" → sessão ativa
-* "agendamentos" → lista de reservas
+## 🔐 Autenticação
+
+A autenticação foi implementada utilizando AsyncStorage para simular um sistema de persistência local.
+
+O fluxo funciona da seguinte forma:
+- O usuário realiza cadastro com validação de campos obrigatórios
+- Os dados são armazenados localmente
+- No login, as credenciais são validadas com os dados persistidos
+- Após login bem-sucedido, o usuário é redirecionado para a aplicação
+- A sessão é mantida mesmo após fechar o app
+- O logout remove os dados da sessão e redireciona para login
+
 
 ### Navegação protegida
 
@@ -112,14 +159,20 @@ Usuário não autenticado é redirecionado para login.
 
 ---
 
-## ⭐ Diferencial Implementado
+## ⭐ Diferencial Implementado: Tema Dinâmico (Dark/Light Mode)
 
-### Tema Claro/Escuro
+Foi implementado um sistema de tema dinâmico utilizando Context API, permitindo ao usuário alternar entre modo claro e escuro diretamente pela tela de perfil.
 
-Permite alternar entre modos de visualização.
+### Justificativa
+Esse diferencial foi escolhido para melhorar a experiência do usuário, permitindo adaptação visual de acordo com preferência pessoal e condições de uso (ex: ambientes escuros).
 
-**Justificativa:**
-Melhora a experiência do usuário, permitindo personalização e conforto visual.
+### Implementação
+Foi criado um `ThemeContext` responsável por:
+- Armazenar o tema atual
+- Alternar entre modo claro e escuro
+- Aplicar estilos dinamicamente em todas as telas
+
+Todas as telas consomem esse contexto, garantindo atualização imediata da interface ao alterar o tema.
 
 ---
 
