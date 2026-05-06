@@ -2,19 +2,19 @@ import { View, Text, Image, TouchableOpacity } from "react-native";
 import { useContext } from "react";
 import { AuthContext } from "../../context/AuthContext";
 import { AppDataContext } from "../../context/AppDataContext";
+import { ThemeContext } from "../../context/ThemeContext";
 import { router } from "expo-router";
-
 
 export default function Home() {
   const { user } = useContext(AuthContext);
   const { agendamentos } = useContext(AppDataContext);
+  const { theme } = useContext(ThemeContext);
 
   const total = agendamentos.length;
 
   return (
-    <View style={{ flex: 1, backgroundColor: "#0A0A0A" }}>
+    <View style={{ flex: 1, backgroundColor: theme.background }}>
       
-      {/* HEADER COM IMAGEM */}
       <View
         style={{
           height: 220,
@@ -34,22 +34,15 @@ export default function Home() {
           }}
         />
 
-        {/* OVERLAY ESCURO */}
         <View
           style={{
             flex: 1,
-            backgroundColor: "rgba(0,0,0,0.6)",
+            backgroundColor: "rgba(0,0,0,0.6)", // mantém overlay
             justifyContent: "center",
             alignItems: "center",
           }}
         >
-          <Text
-            style={{
-              color: "#ED145B",
-              fontSize: 28,
-              fontWeight: "bold",
-            }}
-          >
+          <Text style={{ color: theme.primary, fontSize: 28, fontWeight: "bold" }}>
             FIAP Labs
           </Text>
 
@@ -59,32 +52,29 @@ export default function Home() {
         </View>
       </View>
 
-      {/* CONTEÚDO */}
       <View style={{ padding: 20 }}>
 
-        {/* SAUDAÇÃO */}
-        <Text style={{ color: "#fff", fontSize: 20 }}>
+        <Text style={{ color: theme.text, fontSize: 20 }}>
           Olá, {user?.nome}
         </Text>
 
-        <Text style={{ color: "#999", marginTop: 5 }}>
+        <Text style={{ color: theme.subtext, marginTop: 5 }}>
           Gerencie seus laboratórios de forma rápida
         </Text>
 
-        {/* CARD RESUMO */}
         <View
           style={{
-            backgroundColor: "#1A1A1A",
+            backgroundColor: theme.card,
             padding: 20,
             borderRadius: 15,
             marginTop: 20,
           }}
         >
-          <Text style={{ color: "#999" }}>Seus agendamentos</Text>
+          <Text style={{ color: theme.subtext }}>Seus agendamentos</Text>
 
           <Text
             style={{
-              color: "#ED145B",
+              color: theme.primary,
               fontSize: 28,
               fontWeight: "bold",
               marginTop: 5,
@@ -93,35 +83,33 @@ export default function Home() {
             {total}
           </Text>
 
-          <Text style={{ color: "#999", marginTop: 5 }}>
+          <Text style={{ color: theme.subtext, marginTop: 5 }}>
             Total de reservas realizadas
           </Text>
         </View>
 
-        {/* CARD INFORMAÇÃO */}
         <View
           style={{
-            backgroundColor: "#1A1A1A",
+            backgroundColor: theme.card,
             padding: 20,
             borderRadius: 15,
             marginTop: 15,
           }}
         >
-          <Text style={{ color: "#fff", fontWeight: "bold" }}>
+          <Text style={{ color: theme.text, fontWeight: "bold" }}>
             Como funciona
           </Text>
 
-          <Text style={{ color: "#999", marginTop: 10 }}>
+          <Text style={{ color: theme.subtext, marginTop: 10 }}>
             Escolha um laboratório disponível, selecione a data e confirme
             seu agendamento em poucos segundos.
           </Text>
         </View>
 
-        {/* BOTÃO PRINCIPAL */}
         <TouchableOpacity
           onPress={() => router.push("/(tabs)/criar")}
           style={{
-            backgroundColor: "#ED145B",
+            backgroundColor: theme.primary,
             padding: 15,
             borderRadius: 12,
             marginTop: 20,

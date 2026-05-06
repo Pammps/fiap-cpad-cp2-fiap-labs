@@ -13,16 +13,14 @@ export default function Agendamentos() {
         flex: 1,
         padding: 20,
         paddingTop: 60,
-        backgroundColor: theme.backgroundColor,
+        backgroundColor: theme.background,
       }}
     >
-      <Text
-        style={{ color: theme.textColor, fontSize: 22, fontWeight: "bold" }}
-      >
+      <Text style={{ color: theme.text, fontSize: 22, fontWeight: "bold" }}>
         Meus Agendamentos
       </Text>
 
-      <Text style={{ color: theme.textColor, marginBottom: 15 }}>
+      <Text style={{ color: theme.text, marginBottom: 15 }}>
         Veja e gerencie suas reservas
       </Text>
 
@@ -30,24 +28,24 @@ export default function Agendamentos() {
         data={agendamentos}
         keyExtractor={(item, index) => index.toString()}
         ListEmptyComponent={
-          <Text style={{ color: theme.textColor }}>
+          <Text style={{ color: theme.text }}>
             Nenhum agendamento encontrado
           </Text>
         }
         renderItem={({ item, index }) => (
           <View
             style={{
-              backgroundColor: theme.cardBackgroundColor,
+              backgroundColor: theme.card,
               padding: 15,
               borderRadius: 12,
               marginBottom: 10,
             }}
           >
-            <Text style={{ color: theme.textColor, fontWeight: "bold" }}>
+            <Text style={{ color: theme.text, fontWeight: "bold" }}>
               {item.lab}
             </Text>
 
-            <Text style={{ color: theme.textColor, marginTop: 5 }}>
+            <Text style={{ color: theme.text, marginTop: 5 }}>
               📅 {item.data}
             </Text>
 
@@ -55,14 +53,12 @@ export default function Agendamentos() {
               onPress={() => removeAgendamento(index)}
               style={{
                 marginTop: 10,
-                backgroundColor: theme.buttonBackgroundColor,
+                backgroundColor: theme.primary,
                 padding: 8,
                 borderRadius: 8,
               }}
             >
-              <Text
-                style={{ color: theme.buttonTextColor, textAlign: "center" }}
-              >
+              <Text style={{ color: "#fff", textAlign: "center" }}>
                 Excluir
               </Text>
             </TouchableOpacity>

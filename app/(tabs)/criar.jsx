@@ -18,7 +18,8 @@ const labs = [
 
 export default function Criar() {
   const { addAgendamento } = useContext(AppDataContext);
-  const {  theme } = useContext(ThemeContext);
+  const { theme } = useContext(ThemeContext);
+
   const [labSelecionado, setLabSelecionado] = useState(null);
   const [data, setData] = useState("");
   const [erro, setErro] = useState("");
@@ -37,32 +38,31 @@ export default function Criar() {
   };
 
   return (
-    <View style={{ flex: 1, padding: 20, paddingTop: 60, backgroundColor: theme.backgroundColor }}>
-      <Text style={{ color: theme.textColor, fontSize: 22, fontWeight: "bold" }}>
+    <View style={{ flex: 1, padding: 20, paddingTop: 60, backgroundColor: theme.background }}>
+      <Text style={{ color: theme.text, fontSize: 22, fontWeight: "bold" }}>
         Novo Agendamento
       </Text>
 
-      <Text style={{ color: theme.textColor, marginBottom: 15 }}>
+      <Text style={{ color: theme.text, marginBottom: 15 }}>
         Escolha o laboratório e a data
       </Text>
 
-      {/* DATA */}
-      <Text style={{ color: theme.textColor }}>Data</Text>
+      <Text style={{ color: theme.text }}>Data</Text>
+
       <TextInput
         placeholder="Ex: 10/06/2026"
-        placeholderTextColor="#666"
+        placeholderTextColor={theme.subtext}
         value={data}
         onChangeText={setData}
         style={{
-          backgroundColor: "#1A1A1A",
+          backgroundColor: theme.card,
           padding: 12,
           borderRadius: 8,
           marginBottom: 15,
-          color: theme.textColor,
+          color: theme.text,
         }}
       />
 
-      {/* LABS */}
       <FlatList
         data={labs}
         keyExtractor={(item) => item}
@@ -74,16 +74,18 @@ export default function Criar() {
               marginBottom: 10,
               borderRadius: 10,
               backgroundColor:
-                labSelecionado === item ? "#ED145B" : "#1A1A1A",
+                labSelecionado === item ? theme.primary : theme.card,
             }}
           >
-            <Text style={{ color: "#fff" }}>{item}</Text>
+            <Text style={{ color: labSelecionado === item ? "#fff" : theme.text, }}>
+              {item}
+            </Text>
           </TouchableOpacity>
         )}
       />
 
       {erro ? (
-        <Text style={{ color: "#ED145B", marginBottom: 10 }}>
+        <Text style={{ color: theme.primary, marginBottom: 10 }}>
           {erro}
         </Text>
       ) : null}
@@ -91,7 +93,7 @@ export default function Criar() {
       <TouchableOpacity
         onPress={agendar}
         style={{
-          backgroundColor: "#ED145B",
+          backgroundColor: theme.primary,
           padding: 15,
           borderRadius: 10,
           marginTop: 10,
